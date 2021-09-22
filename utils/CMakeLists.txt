@@ -5,5 +5,7 @@ IF(OPENCV_VERSION_3)
 ADD_EXECUTABLE(demo_general demo_general.cpp)
 ADD_EXECUTABLE(create_voc_step0 create_voc_step0.cpp)
 ADD_EXECUTABLE(create_voc_step1 create_voc_step1.cpp)
-INSTALL(TARGETS  demo_general  create_voc_step0  create_voc_step1  RUNTIME DESTINATION bin)
+INSTALL(TARGETS  demo_general  create_voc_step0  create_voc_step1  RUNTIME BUNDLE DESTINATION bin)
+# https://cmake.org/cmake/help/v3.9/policy/CMP0006.html
+# add BUNDLE
 ENDIF()
